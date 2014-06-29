@@ -57,21 +57,23 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+	
+	 <target name="StartAppiumServer"  >	
+		  <echo message="Starting the App server" />
+		  <exec dir="/usr/local/bin" executable="appium" spawn="true">
+	  	  </exec>
+	  	  <sleep seconds="10"/>
+		</target>
+	
     <target name="TestAppium" depends = "build">
+    	<antcall target ="StartAppiumServer"/>
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="Appium.SoundCloud.TestAppium" todir="${junit.output.dir}"/>
             <classpath refid="AppiumSoundCloud.classpath"/>
         </junit>
-    </target>
-    <target name="testGraph" depends = "build">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Appium.SoundCloud.testGraph" todir="${junit.output.dir}"/>
-            <classpath refid="AppiumSoundCloud.classpath"/>
-        </junit>
+    	<antcall target ="junitreport"/>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">

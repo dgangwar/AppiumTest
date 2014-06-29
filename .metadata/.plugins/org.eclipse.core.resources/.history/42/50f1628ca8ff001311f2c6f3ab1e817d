@@ -1,0 +1,31 @@
+Testsuite: Appium.SoundCloud.TestAppium
+Tests run: 1, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 59.254 sec
+
+Testcase: test_location took 59.212 sec
+	Caused an ERROR
+A new session could not be created. (Original error: Instruments crashed on startup) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 58.55 seconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'dharmeshs-air.lan', ip: '192.168.1.24', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_60'
+Driver info: io.appium.java_client.AppiumDriver
+org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Instruments crashed on startup) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 58.55 seconds
+Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
+System info: host: 'dharmeshs-air.lan', ip: '192.168.1.24', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_60'
+Driver info: io.appium.java_client.AppiumDriver
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:43)
+	at Appium.SoundCloud.TestAppium.setUp(TestAppium.java:40)
+
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at Appium.SoundCloud.TestAppium.tearDown(TestAppium.java:45)
+

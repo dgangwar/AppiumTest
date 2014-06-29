@@ -1,0 +1,92 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: All Tests</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+</head>
+<body onload="open('allclasses-frame.html','classListFrame')">
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>All Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testLogin"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testLogin">testLogin</a></td><td>Success</td><td></td><td>18.648</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testUpload"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testUpload">testUpload</a></td><td>Success</td><td></td><td>24.382</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testDragToRefreshLikesList"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testDragToRefreshLikesList">testDragToRefreshLikesList</a></td><td>Failure</td><td>N/A<br>
+<br>
+<code>junit.framework.AssertionFailedError<br>	at Appium.SoundCloud.Test.SoundCloud.testDragToRefreshLikesList(SoundCloud.java:85)<br>
+</code></td><td>22.172</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testMissingUid"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testMissingUid">testMissingUid</a></td><td>Success</td><td></td><td>16.150</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testMissingPwd"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testMissingPwd">testMissingPwd</a></td><td>Success</td><td></td><td>16.114</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testPlayTrack"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testPlayTrack">testPlayTrack</a></td><td>Error</td><td>A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 90.01 seconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>
+<br>
+<code>org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)<br>Command duration or timeout: 90.01 seconds<br>Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'<br>System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'<br>Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)<br>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)<br>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:151)<br>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)<br>	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver.&lt;init&gt;(AppiumCommonUtilityFunc.java:130)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc.setUpCapability(AppiumCommonUtilityFunc.java:57)<br>	at Appium.SoundCloud.Test.SoundCloud.setUp(SoundCloud.java:26)<br>
+</code>N/A<br>
+<br>
+<code>java.lang.NullPointerException<br>	at Appium.SoundCloud.Test.SoundCloud.tearDown(SoundCloud.java:31)<br>
+</code></td><td>90.022</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testUploadWithoutLogin"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testUploadWithoutLogin">testUploadWithoutLogin</a></td><td>Error</td><td>A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 220 milliseconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>
+<br>
+<code>org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)<br>Command duration or timeout: 220 milliseconds<br>Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'<br>System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'<br>Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)<br>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)<br>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:151)<br>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)<br>	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver.&lt;init&gt;(AppiumCommonUtilityFunc.java:130)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc.setUpCapability(AppiumCommonUtilityFunc.java:57)<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.setUp(SoundCloudWithoutLoginTest.java:26)<br>
+</code>N/A<br>
+<br>
+<code>java.lang.NullPointerException<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.tearDown(SoundCloudWithoutLoginTest.java:31)<br>
+</code></td><td>0.224</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testInvalidLogin"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testInvalidLogin">testInvalidLogin</a></td><td>Error</td><td>A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6.03 seconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>
+<br>
+<code>org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)<br>Command duration or timeout: 6.03 seconds<br>Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'<br>System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'<br>Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)<br>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)<br>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:151)<br>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)<br>	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver.&lt;init&gt;(AppiumCommonUtilityFunc.java:130)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc.setUpCapability(AppiumCommonUtilityFunc.java:57)<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.setUp(SoundCloudWithoutLoginTest.java:26)<br>
+</code>N/A<br>
+<br>
+<code>java.lang.NullPointerException<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.tearDown(SoundCloudWithoutLoginTest.java:31)<br>
+</code></td><td>6.037</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html">SoundCloudTestSuite</a></td><td><a name="testLikesWithoutLogin"></a><a href="Appium/SoundCloud/Test/0_SoundCloudTestSuite.html#testLikesWithoutLogin">testLikesWithoutLogin</a></td><td>Error</td><td>A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.10 seconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>
+<br>
+<code>org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)<br>Command duration or timeout: 4.10 seconds<br>Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'<br>System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'<br>Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)<br>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)<br>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:151)<br>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)<br>	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:111)<br>	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:129)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver.&lt;init&gt;(AppiumCommonUtilityFunc.java:130)<br>	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc.setUpCapability(AppiumCommonUtilityFunc.java:57)<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.setUp(SoundCloudWithoutLoginTest.java:26)<br>
+</code>N/A<br>
+<br>
+<code>java.lang.NullPointerException<br>	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.tearDown(SoundCloudWithoutLoginTest.java:31)<br>
+</code></td><td>4.100</td>
+</tr>
+</table>
+</body>
+</html>
