@@ -1,0 +1,52 @@
+Testsuite: Appium.SoundCloud.Test.SoundCloudTestSuite
+Tests run: 9, Failures: 2, Errors: 2, Time elapsed: 206.16 sec
+------------- Standard Output ---------------
+0
+------------- ---------------- ---------------
+
+Testcase: testLogin took 18.841 sec
+Testcase: testUpload took 22.454 sec
+Testcase: testDragToRefreshLikesList took 22.453 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
+	at Appium.SoundCloud.Test.SoundCloud.testDragToRefreshLikesList(SoundCloud.java:85)
+
+Testcase: testMissingUid took 16.142 sec
+Testcase: testMissingPwd took 16.327 sec
+Testcase: testPlayTrack took 18.199 sec
+	FAILED
+null
+junit.framework.AssertionFailedError
+	at Appium.SoundCloud.Test.SoundCloud.testPlayTrack(SoundCloud.java:130)
+
+Testcase: testUploadWithoutLogin took 20.244 sec
+Testcase: testInvalidLogin took 57.235 sec
+	Caused an ERROR
+A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57.23 seconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver
+org.openqa.selenium.remote.SessionNotFoundException: A session is either terminated or not started (Original error: Instruments did not launch successfully--please check your app paths or bundle IDs and try again) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 57.23 seconds
+Build info: version: '2.35.0', revision: 'c916b9d', time: '2013-08-12 15:42:01'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.5', java.version: '1.6.0_51'
+Driver info: Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:191)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:151)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:111)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:129)
+	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc$SwipeableWebDriver.<init>(AppiumCommonUtilityFunc.java:130)
+	at Appium.SoundCloud.Test.AppiumCommonUtilityFunc.setUpCapability(AppiumCommonUtilityFunc.java:57)
+	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.setUp(SoundCloudWithoutLoginTest.java:26)
+
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at Appium.SoundCloud.Test.SoundCloudWithoutLoginTest.tearDown(SoundCloudWithoutLoginTest.java:31)
+
+Testcase: testLikesWithoutLogin took 14.245 sec
