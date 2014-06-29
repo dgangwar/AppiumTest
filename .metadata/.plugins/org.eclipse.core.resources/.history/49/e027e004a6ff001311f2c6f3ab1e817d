@@ -57,7 +57,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="TestAppium" depends = "build">
+    <target name="TestAppium">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -65,7 +65,7 @@
             <classpath refid="AppiumSoundCloud.classpath"/>
         </junit>
     </target>
-    <target name="testGraph" depends = "build">
+    <target name="testGraph">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
