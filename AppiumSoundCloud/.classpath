@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="lib/junit-4.11.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-java-2.42.2.jar"/>
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-2.42.2.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-all-1.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
