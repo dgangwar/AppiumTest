@@ -66,6 +66,12 @@
 		</target>
 	
     <target name="TestAppium" depends = "build">
+    	<delete>
+    	   <fileset dir="${junit.output.dir}">
+    	      <include name="**/*"/>
+    	   </fileset>
+    	</delete>
+    	
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
