@@ -57,7 +57,7 @@ public class TestAppium {
 	
 	@Test
 	public void testSample() {
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 		
 	}
 
