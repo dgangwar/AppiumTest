@@ -7,23 +7,25 @@
 <project basedir="." default="build" name="AppiumSoundCloud">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../Applications/eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
     <property name="source" value="1.6"/>
     <path id="AppiumSoundCloud.classpath">
         <pathelement location="bin"/>
-        <pathelement location="../../../Downloads/junit-4.11.jar"/>
-        <pathelement location="../../../Downloads/java-client-1.3.0.jar"/>
-        <pathelement location="../../../Downloads/selenium-java-2.42.2.zip"/>
-        <pathelement location="../../../Downloads/selenium-server-standalone-2.42.2.jar"/>
-        <pathelement location="../../../Downloads/json-simple-1.1.1.jar"/>
-        <pathelement location="../../../Downloads/commons-lang-2.3.jar"/>
-        <pathelement location="../../../Downloads/google-gson-2.2.4/gson-2.2.4.jar"/>
+        <pathelement location="lib/junit-4.11.jar"/>
+        <pathelement location="lib//java-client-1.3.0.jar"/>
+        <pathelement location="lib/Downloads/selenium-java-2.42.2.zip"/>
+        <pathelement location="lib/Downloads/selenium-server-standalone-2.42.2.jar"/>
+        <pathelement location="lib/Downloads/json-simple-1.1.1.jar"/>
+        <pathelement location="lib/Downloads/commons-lang-2.3.jar"/>
+        <pathelement location=".lib/Downloads/google-gson-2.2.4/gson-2.2.4.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
+                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -55,22 +57,28 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="SoundCloudTestSuite">
+    <target name="TestAppium">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="yes">
-            <!--formatter type="xml"/-->
-        	<formatter type="plain" />
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
             <test name="Appium.SoundCloud.TestAppium" todir="${junit.output.dir}"/>
             <classpath refid="AppiumSoundCloud.classpath"/>
         </junit>
     </target>
-    <target name="run" depends="SoundCloudTestSuite">
+    <target name="testGraph">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Appium.SoundCloud.testGraph" todir="${junit.output.dir}"/>
+            <classpath refid="AppiumSoundCloud.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
             </fileset>
-        	 <report format="noframes" todir="${reports}\html\" />
-            <!--report format="frames" todir="${junit.output.dir}"/-->
+            <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
 </project>
