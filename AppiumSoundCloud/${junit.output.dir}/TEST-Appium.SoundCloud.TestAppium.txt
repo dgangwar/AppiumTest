@@ -1,46 +1,28 @@
 Testsuite: Appium.SoundCloud.TestAppium
-Tests run: 1, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.95 sec
+Tests run: 1, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 60.1 sec
 
-Testcase: test_location took 0.915 sec
+Testcase: test_location took 60.06 sec
 	Caused an ERROR
-Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+A new session could not be created. (Original error: Instruments crashed on startup) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59.38 seconds
 Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
 System info: host: 'dharmeshs-air.lan', ip: '192.168.1.24', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_60'
-Driver info: driver.version: AppiumDriver
-org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Driver info: io.appium.java_client.AppiumDriver
+org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Instruments crashed on startup) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 59.38 seconds
 Build info: version: '2.42.2', revision: '6a6995d', time: '2014-06-03 17:42:03'
 System info: host: 'dharmeshs-air.lan', ip: '192.168.1.24', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.3', java.version: '1.7.0_60'
-Driver info: driver.version: AppiumDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+Driver info: io.appium.java_client.AppiumDriver
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:82)
 	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
 	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:126)
 	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:43)
 	at Appium.SoundCloud.TestAppium.setUp(TestAppium.java:40)
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:138)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
-	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:204)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:173)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
-Caused by: java.net.ConnectException: Connection refused
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:579)
-	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
-	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118)
 
 	Caused an ERROR
 null

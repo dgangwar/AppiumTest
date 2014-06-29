@@ -19,7 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  * 
  * @author Ross Rowe
  */
-public class TestAppium {
+public class testGraph {
 	private AppiumDriver driver;
 
 	@Before
@@ -28,8 +28,8 @@ public class TestAppium {
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(
 				classpathRoot,
-				"../../../Library/Developer/Xcode/DerivedData/sharebuilder-fnpszkqmxagkbshcenesyzjocyrj/Build/Products/Debug-iphonesimulator/");
-		File app = new File(appDir, "sharebuilder.app");
+				"/../../Library/Developer/Xcode/DerivedData/chat1.2-bexkvqewvpjfzqfyxwqbhbwylhjq/Build/Products/Debug-iphonesimulator/");
+		File app = new File(appDir, "chat1.2.app");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformVersion", "7.1");
@@ -48,11 +48,8 @@ public class TestAppium {
 	@Test
 	public void test_location() {
 		// get third row location
-		boolean directory = driver
-				.findElement(
-						By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[1]/UIAStaticText[1]"))
-				.isDisplayed();
-		System.out.println(directory);
+		System.out.println(driver.isAppInstalled("com.rsaif"));
+		driver.shake();
 	}
 	
 

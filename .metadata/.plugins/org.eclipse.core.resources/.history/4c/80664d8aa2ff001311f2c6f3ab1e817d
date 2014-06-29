@@ -28,7 +28,7 @@ public class TestAppium {
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(
 				classpathRoot,
-				"../../../Library/Developer/Xcode/DerivedData/sharebuilder-fnpszkqmxagkbshcenesyzjocyrj/Build/Products/Debug-iphonesimulator/");
+				"../../../Users/dgangwar/Library/Developer/Xcode/DerivedData/sharebuilder-fnpszkqmxagkbshcenesyzjocyrj/Build/Products/Debug-iphonesimulator/");
 		File app = new File(appDir, "sharebuilder.app");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
