@@ -15,7 +15,7 @@
         <pathelement location="bin"/>
         <pathelement location="lib/junit-4.11.jar"/>
         <pathelement location="lib/java-client-1.3.0.jar"/>
-        <pathelement location="lib/selenium-java-2.42.2.zar"/>
+        <pathelement location="lib/selenium-java-2.42.2.zip"/>
         <pathelement location="lib/selenium-server-standalone-2.42.2.jar"/>
         <pathelement location="lib/json-simple-1.1.1.jar"/>
         <pathelement location="lib/commons-lang-2.3.jar"/>
