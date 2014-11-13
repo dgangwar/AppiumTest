@@ -11,20 +11,18 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import util.ReadData;
 import com.jayway.restassured.response.Response;
 
 public class WeatherTest
 {
-    
+	private static Response res ;
      
   @BeforeClass
-  public void f() 
+  public void setUp() 
    {
-      
-      Response res = get("http://api.openweathermap.org/data/2.5/weather?q=London,uk");
-      System.out.println(res);
-     
+      res = get("http://api.openweathermap.org/data/2.5/weather?q=London,uk");
+          
   }
    
   @Test
@@ -32,7 +30,7 @@ public class WeatherTest
     givenRequestWithNoAcceptHeader_whenRequestIsExecuted_thenDefaultResponseContentTypeIsJson()
     throws ClientProtocolException, IOException{
       // Given
-      String jsonMimeType = "application/json";
+      String jsonMimeType = ReadData.getProperty("contentType");
       HttpUriRequest request = new HttpGet( "http://api.openweathermap.org/data/2.5/weather?q=London,uk" );
     
       // When
