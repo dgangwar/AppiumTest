@@ -1,28 +1,24 @@
 package restAssured;
 
+import static com.jayway.restassured.RestAssured.get;
 import java.io.IOException;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.jayway.restassured.RestAssured;
-import static com.jayway.restassured.RestAssured.*;
-import static com.jayway.restassured.matcher.RestAssuredMatchers.*;
-import com.jayway.restassured.response.Response;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.hamcrest.Matchers.*;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-public class NewTest
+import com.jayway.restassured.response.Response;
+
+public class WeatherTest
 {
     
      
-  //@Test
+  @BeforeClass
   public void f() 
    {
       
