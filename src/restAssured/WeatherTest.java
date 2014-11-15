@@ -2,63 +2,81 @@ package restAssured;
 
 import static com.jayway.restassured.RestAssured.get;
 import static com.jayway.restassured.RestAssured.given;
-
 import java.io.IOException;
-import java.util.Map;
-
+import org.junit.Ignore;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Response;
 
 public class WeatherTest {
 	private static Response res;
+	private static String json;
 
 	@BeforeClass
 	public void setUp() {
-		
+
 		res = get("http://api.openweathermap.org/data/2.5/weather?q=London,uk");
+		json = res.asString();
 	}
 
-	@Test(groups = "header")
-	public void checkStatus() throws IOException {
-
+	@Test(groups = "functional")
+	public void checkStatusSuccess() throws IOException {
+		given().expect()
+				.statusCode(200)
+				.when()
+				.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk");
 		res.then().assertThat().statusCode(200);
 
 	}
 
-	@Test(groups = "header")
+	@Test(groups = "functional")
+	public void checkInvalidStatus() throws IOException {
+		given().expect().statusCode(500).when()
+				.get("http://api.openweathermap.org/data/2.5/=");
+
+	}
+
+	@Test(groups = "functional")
 	public void checkContentType() throws IOException {
 
 		res.then().assertThat().contentType("application/json");
 	}
 
-	@Test
-	public void checkJsonNode() throws IOException {
+	@Test(groups = "functional")
+	public void checkLatttitudeAndLongitude() throws IOException {
 
-		String json = res.asString();
-		System.out.println(json.length());
 		JsonPath jsonPath = new JsonPath(json).setRoot("coord");
-		System.out.println(jsonPath.getString(("lon")));
-		System.out.println(jsonPath.getString(("lat")));
-		jsonPath.getString(("lon")).equals("-0.13");
-		jsonPath.getString(("lat")).equals("-0.13");
+		Assert.assertEquals(jsonPath.getString(("lon")), "-0.13");
+		Assert.assertEquals(jsonPath.getString(("lat")), "51.51");
+	}
+
+	@Test(groups = "functional")
+	public void checkCountry() throws IOException {
+
+		JsonPath jsonPath = new JsonPath(json).setRoot("sys");
+		Assert.assertEquals(jsonPath.getString(("country")), "GB");
 
 	}
 
-	@Test
+	/**
+	 * This method is not implemented yet.
+	 * 
+	 * @throws IOException
+	 */
+	@Ignore
+	@Test(groups = "functional")
 	public void checkOAuth() throws IOException {
 
 		given().auth().oauth2("");
 
 	}
 
-	@Test(groups = "header")
+	@Test(groups = "functional")
 	public void checkCookies() throws IOException {
 
-		Map<String, String> allCookies = res.getCookies();
-		System.out.println(allCookies.size());
+		Assert.assertEquals(res.getCookies().size(), 0);
 	}
 
 }
