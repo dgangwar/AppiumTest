@@ -27,7 +27,7 @@ final public class ReadData
 		return prop;
 	}
 		
-	public static String getProperty(String propertyName) throws IOException
+	public static String getProperty(String propertyName)
 	{
 		return loadProperty().getProperty(propertyName);
 	}
