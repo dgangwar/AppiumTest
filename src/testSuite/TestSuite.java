@@ -19,6 +19,8 @@ public class TestSuite {
 
 		// Create an instance of XmlTest and assign a name for it.
 		XmlTest myTest = new XmlTest(mySuite);
+		
+		myTest.addIncludedGroup("functional");
 
 		// Create a list which can contain the classes that you want to run.
 		List<XmlClass> myClasses = new ArrayList<XmlClass>();
