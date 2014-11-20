@@ -81,6 +81,7 @@
 	</path>
 
 	<target name="clean" description="Delete bin Directory">
+	     <echo message="Deleting the old classes"/>
 		<delete dir="bin" />
 	</target>
 
@@ -102,6 +103,7 @@
 	</taskdef>
 
 	<target name="Run" depends="compile" description="Run TestNG test cases">
+	     <echo message="Running the TestNG test cases."/>
 		<mkdir dir="testng_output" />
 		<!-- config testng -->
 		<testng outputdir="testng_output" classpathref="rest.tests.webservice.classpath"
@@ -118,6 +120,7 @@
 	</target>
 
 	<target name="xslt" description="Format the default TestNg Result file">
+	    <echo message="Formatting the Result file}"/>
 		<xslt in="testng_output/testng-results.xml" style="${basedir}/testng-results.xsl"
 			out="${basedir}/TestResult/RestTestResult.html" processor="SaxonLiaison">
 			<param expression="${basedir}/TestResult/" name="testNgXslt.outputDir" />
