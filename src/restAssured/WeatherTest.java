@@ -26,7 +26,7 @@ public class WeatherTest {
 		res = get("http://api.openweathermap.org/data/2.5/weather?q=London,uk");
 		json = res.asString();
 		log = Logger.getLogger(LoggingAssert.class.getName());
-		
+
 	}
 
 	@Test(groups = "status")
@@ -68,11 +68,14 @@ public class WeatherTest {
 	 * 
 	 * @throws IOException
 	 */
-	@Ignore
 	@Test(groups = "functional")
 	public void checkOAuth() throws IOException {
 
-		given().auth().oauth2("");
+		res = given().auth().oauth("LT12encUTAiFfM7RJX9es47t2", "m1o1dxCFzneGrT6UcIgbd3uTW6o3WgCi6NojmOfC85rPO3cde3", "118304441-DzkNUmYPPwvYbTv46XXHdoDCeHSkIMYYWyG5JsIJ", "lfVq6Xy3HEWLXA2ulbtPhDZ9FSX3f2UZFgM0KhTBlX1vB").get("https://api.twitter.com/1.1/followers/list.json");
+		res.then().statusCode(200);
+		System.out.println(res.getContentType());
+		System.out.println(res.body().asString());
+		
 
 	}
 

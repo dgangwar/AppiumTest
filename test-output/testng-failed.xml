@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="restAssured.NewTest">
+      <class name="restAssured.TwitterTest">
         <methods>
-          <include name="givenRequestWithNoAcceptHeader_whenRequestIsExecuted_thenDefaultResponseContentTypeIsJson"/>
+          <include name="setUp"/>
+          <include name="checkCookies"/>
         </methods>
-      </class> <!-- restAssured.NewTest -->
+      </class> <!-- restAssured.TwitterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

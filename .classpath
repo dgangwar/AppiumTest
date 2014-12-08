@@ -72,5 +72,14 @@
 	<classpathentry kind="lib" path="lib/xercesImpl-2.10.0.jar"/>
 	<classpathentry kind="lib" path="lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/signpost-commonshttp4-1.2.1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/dgangwar/Downloads/TEST2/signpost-core-1.2.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
