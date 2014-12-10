@@ -14,8 +14,13 @@ import org.testng.asserts.LoggingAssert;
 import com.jayway.restassured.path.json.JsonPath;
 import com.jayway.restassured.response.Headers;
 import com.jayway.restassured.response.Response;
+/*
+ * This class is not complete. Test has to be modified. 
+ * Right now it only shows that we can get Friends list, header and cookies when an Oauth call is made to the Twitter api. 
+ * 
+ */
 
-public class TwitterTest {
+public class TwitterFriendListTest {
 	private static Response res;
 	private static String json;
 	private Logger log;
@@ -30,16 +35,14 @@ public class TwitterTest {
 						"m1o1dxCFzneGrT6UcIgbd3uTW6o3WgCi6NojmOfC85rPO3cde3",
 						"118304441-DzkNUmYPPwvYbTv46XXHdoDCeHSkIMYYWyG5JsIJ",
 						"lfVq6Xy3HEWLXA2ulbtPhDZ9FSX3f2UZFgM0KhTBlX1vB")
-				.get("https://api.twitter.com/1.1/followers/ids.json");
-		log = Logger.getLogger(LoggingAssert.class.getName());
+				.get("https://api.twitter.com/1.1/friendships/show.json");
 		jsonPath = new JsonPath(json).setRoot("ids");
 
 	}
 
 	@Test(groups = "status")
 	public void checkStatusSuccess() throws IOException {
-		res.then().assertThat().statusCode(200);
-		log.info("This is Status check message");
+		res.then().statusCode(200);
 	}
 
 	@Test(groups = "functional")
