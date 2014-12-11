@@ -17,6 +17,7 @@ import com.jayway.restassured.response.Response;
 
 /*
  * This class is not complete. Test has to be added. 
+ * Right now it only shows that a rest api call is made to the Twitter for user timeline.
  * 
  */
 
@@ -37,12 +38,12 @@ public class TwitterUserTimeLine {
 	}
 
 	@Test(groups = "status")
-	public void checkStatusSuccess() throws IOException {
+	public void checkStatusSuccess() {
 		res.then().statusCode(200);
 	}
 
 	@Test(groups = "functional")
-	public void checkContentType() throws IOException {
+	public void checkContentType() {
 
 		res.then().assertThat().contentType("application/json");
 	}

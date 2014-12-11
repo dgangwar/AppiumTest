@@ -25,6 +25,8 @@ public class TestSuite {
 		// Create a list which can contain the classes that you want to run.
 		List<XmlClass> myClasses = new ArrayList<XmlClass>();
 		myClasses.add(new XmlClass("restAssured.WeatherTest"));
+		myClasses.add(new XmlClass("restAssured.TwitterFriendListTest"));
+		myClasses.add(new XmlClass("restAssured.TwitterUserTimeLine"));
 
 		// Assign that to the XmlTest Object created earlier.
 		myTest.setXmlClasses(myClasses);
