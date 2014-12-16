@@ -3,8 +3,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. -->
-<project basedir="." default="build" name="AppiumSoundCloud">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="AppiumSoundCloud">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../../../../Applications/eclipse"/>
     <property name="junit.output.dir" value="junit"/>
@@ -13,13 +12,13 @@
     <property name="source" value="1.6"/>
     <path id="AppiumSoundCloud.classpath">
         <pathelement location="bin"/>
-        <pathelement location="lib/junit-4.11.jar"/>
-        <pathelement location="lib/java-client-1.3.0.jar"/>
-        <pathelement location="lib/selenium-server-standalone-2.42.2.jar"/>
-        <pathelement location="lib/json-simple-1.1.1.jar"/>
         <pathelement location="lib/commons-lang-2.3.jar"/>
-        <pathelement location="lib/google-gson-2.2.4/gson-2.2.4.jar"/>
-    	<pathelement location="lib/hamcrest-all-1.3.jar"/>
+        <pathelement location="lib/gson-2.2.4.jar"/>
+        <pathelement location="lib/java-client-1.3.0.jar"/>
+        <pathelement location="lib/json-simple-1.1.1.jar"/>
+        <pathelement location="lib/junit-4.11.jar"/>
+        <pathelement location="lib/hamcrest-all-1.3.jar"/>
+        <pathelement location="lib/selenium-server-standalone-2.42.2.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -57,29 +56,25 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-	
-	 <target name="StartAppiumServer"  >	
-		  <echo message="Starting the App server" />
-		  <exec dir="/usr/local/bin" executable="appium" spawn="true">
-	  	  </exec>
-	  	  <sleep seconds="10"/>
-		</target>
-	
-    <target name="TestAppium" depends = "build">
+    <target name="AppiumSuite">
+        <java classname="com.automation.appium.test.AppiumSuite" failonerror="true" fork="yes">
+            <classpath refid="AppiumSoundCloud.classpath"/>
+        </java>
+    </target>
+    <target name="testGraph">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="Appium.SoundCloud.TestAppium" todir="${junit.output.dir}"/>
+            <test name="com.automation.appium.test.TestGeneral" todir="${junit.output.dir}"/>
             <classpath refid="AppiumSoundCloud.classpath"/>
         </junit>
-    	<antcall target ="junitreport"/>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
             </fileset>
-            <report format="noframes" todir="${junit.output.dir}"/>
+            <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
 </project>

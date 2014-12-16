@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">TmpSuite</th></tr><tr><td><a href="#t0">TmpTest</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num">200,495</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TmpSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TmpTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.automation.appium.test.TestGeneral</td><td><a href="#m0">setUp</a></td><td rowspan="1">1418770458674</td><td rowspan="1">0</td></tr><tr><th colspan="4">TmpTest &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.automation.appium.test.TestStorage</td><td><a href="#m1">beforeClass</a></td><td rowspan="1">1418770659160</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">setUp</a></td><td rowspan="1">1418770659161</td><td rowspan="1">0</td></tr><tr><th colspan="4">TmpTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.automation.appium.test.TestGeneral</td><td><a href="#m3">testDeviceInformation</a></td><td rowspan="1">1418770659157</td><td rowspan="1">1</td></tr><tr class="skippedodd"><td rowspan="1">com.automation.appium.test.TestStorage</td><td><a href="#m4">testStorageInformation</a></td><td rowspan="1">1418770659161</td><td rowspan="1">1</td></tr></tbody></table><h2>TmpTest</h2><h3 id="m0">com.automation.appium.test.TestGeneral#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:03&apos;
+System info: host: &apos;Dharmeshs-Air.lan&apos;, ip: &apos;192.168.1.160&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.1&apos;, java.version: &apos;1.7.0_60&apos;
+Driver info: driver.version: AppiumDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:593)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:82)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:87)
+	at io.appium.java_client.AppiumDriver.closeApp(AppiumDriver.java:433)
+	at com.automation.core.BaseAppium.setUp(BaseAppium.java:61)
+	at com.automation.appium.test.AppiumSuite.getTestNGSuite(AppiumSuite.java:37)
+	at com.automation.appium.test.AppiumSuite.main(AppiumSuite.java:19)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: Connection refused
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:138)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:85)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:222)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:173)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:572)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:118)
+	... 41 more
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.automation.appium.test.TestStorage#beforeClass</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.automation.appium.test.TestStorage#setUp</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">com.automation.appium.test.TestGeneral#testDeviceInformation</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">com.automation.appium.test.TestStorage#testStorageInformation</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
