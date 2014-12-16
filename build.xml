@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="rest.tests.webservice">
+	<property environment="env" />
+	<property name="ECLIPSE_HOME" value="../../../../../../Applications/eclipse" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.7" />
+	<property name="source" value="1.7" />
+	<path id="rest.tests.webservice.classpath">
+		<pathelement location="bin" />
+		<pathelement location="lib/apache-jakarta-commons-net-ftp.jar" />
+		<pathelement location="lib/apache-logging-log4j.jar" />
+		<pathelement location="lib/apache-mime4j-0.6.jar" />
+		<pathelement location="lib/ATU_ALM_ServiceWrapper_1.0.jar" />
+		<pathelement location="lib/bsh-1.3.0.jar" />
+		<pathelement location="lib/cglib-nodep-2.1_3.jar" />
+		<pathelement location="lib/com.google.inject_2.0.0.v201105231817.jar" />
+		<pathelement location="lib/commons-codec-1.8.jar" />
+		<pathelement location="lib/commons-collections-3.2.1.jar" />
+		<pathelement location="lib/commons-exec-1.1.jar" />
+		<pathelement location="lib/commons-io-2.2.jar" />
+		<pathelement location="lib/commons-jxpath-1.3.jar" />
+		<pathelement location="lib/commons-lang3-3.1.jar" />
+		<pathelement location="lib/commons-logging-1.1.1.jar" />
+		<pathelement location="lib/cssparser-0.9.11.jar" />
+		<pathelement location="lib/db2jcc_javax-9.jar" />
+		<pathelement location="lib/groovy-all-2.3.3.jar" />
+		<pathelement location="lib/guava-15.0.jar" />
+		<pathelement location="lib/hamcrest-all-1.3.0RC2.jar" />
+		<pathelement location="lib/hamcrest-core-1.3.jar" />
+		<pathelement location="lib/hamcrest-library-1.3.jar" />
+		<pathelement location="lib/htmlparser-1.5.jar" />
+		<pathelement location="lib/htmlunit-2.13.jar" />
+		<pathelement location="lib/htmlunit-core-js-2.13.jar" />
+		<pathelement location="lib/httpclient-4.3.1.jar" />
+		<pathelement location="lib/httpcore-4.3.jar" />
+		<pathelement location="lib/httpmime-4.3.1.jar" />
+		<pathelement location="lib/ini4j-0.5.2.jar" />
+		<pathelement location="lib/jackson-core-2.2.3.jar" />
+		<pathelement location="lib/jacob.jar" />
+		<pathelement location="lib/javax.inject.jar" />
+		<pathelement location="lib/jcabi-log-0.7.17.jar" />
+		<pathelement location="lib/jcommander-1.29.jar" />
+		<pathelement location="lib/jdom-1.1.jar" />
+		<pathelement location="lib/jetty-websocket-8.1.8.jar" />
+		<pathelement location="lib/jna-3.4.0.jar" />
+		<pathelement location="lib/jna-platform-3.4.0.jar" />
+		<pathelement location="lib/json-20080701.jar" />
+		<pathelement location="lib/nekohtml-1.9.19.jar" />
+		<pathelement location="lib/netty-3.5.7.Final.jar" />
+		<pathelement location="lib/objenesis-1.2.jar" />
+		<pathelement location="lib/openpojo-0.1.2.jar" />
+		<pathelement location="lib/operadriver-1.5.jar" />
+		<pathelement location="lib/org.springframework.asm-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/org.springframework.expression-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/org.springframework.jdbc-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/org.springframework.transaction-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/phantomjsdriver-1.0.4.jar" />
+		<pathelement location="lib/platform.jar" />
+		<pathelement location="lib/poi-3.8-beta4-20110826.jar" />
+		<pathelement location="lib/protobuf-java-2.4.1.jar" />
+		<pathelement location="lib/reflections-0.9.6.jar" />
+		<pathelement location="lib/reportng-1.1.3.jar" />
+		<pathelement location="lib/rest-assured-2.3.4.jar" />
+		<pathelement location="lib/sac-1.3.jar" />
+		<pathelement location="lib/saxon-8.7.jar" />
+		<pathelement location="lib/scribe-1.3.3.jar" />
+		<pathelement location="lib/selenium-java-2.39.0.jar" />
+		<pathelement location="lib/selenium-server-standalone-2.39.0.jar" />
+		<pathelement location="lib/serializer-2.7.1.jar" />
+		<pathelement location="lib/spring-beans-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/spring-context-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/spring-core-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/spring-test-3.0.5.RELEASE.jar" />
+		<pathelement location="lib/sqlite-jdbc-3.7.2.jar" />
+		<pathelement location="lib/testng-6.8.5.jar" />
+		<pathelement location="lib/velocity-dep-1.4.jar" />
+		<pathelement location="lib/xalan-2.7.1.jar" />
+		<pathelement location="lib/xercesImpl-2.10.0.jar" />
+		<pathelement location="lib/xml-apis-1.4.01.jar" />
+		<pathelement location="lib/SaxonLiaison.jar" />
+	</path>
+
+	<target name="clean" description="Delete bin Directory">
+	     <echo message="Deleting the old classes"/>
+		<delete dir="bin" />
+	</target>
+
+	<target name="compile" depends="clean" description="Compile all the test files">
+		<echo message="${ant.project.name}: ${ant.file}" />
+		<mkdir dir="bin" />
+		<javac debug="true" debuglevel="${debuglevel}" destdir="bin"
+			includeantruntime="false" source="${source}" target="${target}">
+			<src path="src" />
+			<classpath refid="rest.tests.webservice.classpath" />
+		</javac>
+	</target>
+
+	<!-- Config for testng -->
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="lib/testng-6.8.5.jar" />
+		</classpath>
+	</taskdef>
+
+	<target name="Run" depends="compile" description="Run TestNG test cases">
+	     <echo message="Running the TestNG test cases."/>
+		<mkdir dir="testng_output" />
+		<!-- config testng -->
+		<testng outputdir="testng_output" classpathref="rest.tests.webservice.classpath"
+			useDefaultListeners="true">
+			<!-- execute testcase follow testng.xml -->
+			<classfileset dir="bin" includes="**/*.class" />
+			<!-- generate report title -->
+			<sysproperty key="org.uncommons.reportng.title" value="Test Automation" />
+			<sysproperty key="org.uncommons.reportng.escape-output"
+				value="false" />
+		</testng>
+		<antcall target="xslt" />
+		<antcall target="cleanDefaultOutput" />
+	</target>
+
+	<target name="xslt" description="Format the default TestNg Result file">
+	    <echo message="Formatting the Result file}"/>
+		<xslt in="testng_output/testng-results.xml" style="${basedir}/testng-results.xsl"
+			out="${basedir}/TestResult/RestTestResult.html" processor="SaxonLiaison">
+			<param expression="${basedir}/TestResult/" name="testNgXslt.outputDir" />
+			<param expression="true" name="testNgXslt.sortTestCaseLinks" />
+			<param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+			<param expression="true" name="testNgXslt.showRuntimeTotals" />
+			<classpath refid="rest.tests.webservice.classpath">
+			</classpath>
+		</xslt>
+	</target>
+	
+	<target name="cleanDefaultOutput" description="Delete TestNG default Directory">
+		<delete dir="testng_output" />
+	</target>
+	
+</project>
+
